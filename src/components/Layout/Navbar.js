@@ -87,7 +87,7 @@ export default function Navbar() {
       {['right'].map((anchor) => (
         <AppBar position="relative">
           <Toolbar className="nav-container main-nav">
-            <Link to="/">
+            <Link to="/covid19">
               <MyButton tip="Home">
                 <HomeIcon />
               </MyButton>

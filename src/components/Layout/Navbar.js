@@ -16,8 +16,6 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 //Icon
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -26,7 +24,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MenuIcon from '@material-ui/icons/Menu';
 
 //Link
-
+import MaterialLink from "@material-ui/core/Link";
 
 const useStyles = makeStyles({
   list: {
@@ -62,22 +60,36 @@ export default function Navbar() {
     >
       <List>
         
-        <Link color="primary" underlin="hover" href="/">
+        <MaterialLink color="primary" underlin="hover" href="/covid19">
           <ListItem button>
             <ListItemIcon><HomeIcon /></ListItemIcon>
-            <ListItemText primary="Hone" />
+            <ListItemText primary="Home" />
           </ListItem>
-        </Link>
+        </MaterialLink>
       </List>
       <Divider />
       <List>
         
-        <Link color="primary" underlin="none" href="https://facebook.com/with.rain79/">
-        <ListItem button>
+        <MaterialLink color="inherit" href="https://facebook.com/with.rain79/" target="_blank">
+        <ListItem>
           <ListItemIcon><FacebookIcon /></ListItemIcon>
           <ListItemText primary="Facebook" />
         </ListItem>
-        </Link>
+        </MaterialLink>
+        
+        <MaterialLink color="inherit" href="https://twitter.com/RSRUSSELL6" target="_blank">
+        <ListItem button>
+            <ListItemIcon><TwitterIcon /></ListItemIcon>
+          <ListItemText primary="Twitter" />
+        </ListItem>
+        </MaterialLink>
+        
+        <MaterialLink color="inherit" href="https://www.linkedin.com/in/rs-russell/" target="_blank">
+        <ListItem button>
+            <ListItemIcon><LinkedInIcon /></ListItemIcon>
+          <ListItemText primary="LinkedIn" />
+        </ListItem>
+        </MaterialLink>
       </List>
     </div>
   );

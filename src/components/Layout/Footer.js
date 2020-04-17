@@ -40,17 +40,17 @@ export default function StickyFooter() {
           <div>
             <ul className="socialbox">
               <li>
-                <Link color="inherit" href="https://facebook.com/with.rain79/">
+                <Link color="inherit" href="https://facebook.com/with.rain79/" target="_blank">
                   <FacebookIcon />
                 </Link>
               </li>
               <li>
-                <Link color="inherit" href="https://twitter.com/RSRUSSELL6">
+                <Link color="inherit" href="https://twitter.com/RSRUSSELL6" target="_blank">
                   <TwitterIcon />
                 </Link>
               </li>
               <li>
-                <Link color="inherit" href="https://www.linkedin.com/in/rs-russell/">
+                <Link color="inherit" href="https://www.linkedin.com/in/rs-russell/" target="_blank">
                   <LinkedInIcon />
                 </Link>
               </li>

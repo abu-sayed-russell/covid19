@@ -6,7 +6,7 @@ import cx from "classnames";
 import styles from "./Cards.module.css";
 
 const Info = ({
-  data: { confirmed, recovered, deaths, lastUpdate },
+  data: { confirmed, recovered, deaths, lastUpdate, totalconf },
 }) => {
   if (!confirmed) {
     return "Loading...";
@@ -24,7 +24,7 @@ const Info = ({
         >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Infected
+              Infected {totalconf}
             </Typography>
             <Typography variant="h5" component="h2">
               <CountUp

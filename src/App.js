@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import Home from "./pages/Home";
-import Bangladesh from "./pages/Bangladesh";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";

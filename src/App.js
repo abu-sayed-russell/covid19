@@ -19,7 +19,7 @@ class App extends Component {
             <CssBaseline />
             <Container maxWidth="lg">
               <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/covid19" component={Home} />
               </Switch>
             </Container>
             <Footer />

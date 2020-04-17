@@ -20,7 +20,6 @@ class App extends Component {
             <Container maxWidth="lg">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/bangladesh" component={Bangladesh} />
               </Switch>
             </Container>
             <Footer />

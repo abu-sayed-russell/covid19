@@ -59,7 +59,7 @@ export default function Navbar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        
+
         <MaterialLink color="primary" underlin="hover" href="/covid19">
           <ListItem button>
             <ListItemIcon><HomeIcon /></ListItemIcon>
@@ -69,26 +69,26 @@ export default function Navbar() {
       </List>
       <Divider />
       <List>
-        
+
         <MaterialLink color="inherit" href="https://facebook.com/with.rain79/" target="_blank">
-        <ListItem>
-          <ListItemIcon><FacebookIcon /></ListItemIcon>
-          <ListItemText primary="Facebook" />
-        </ListItem>
+          <ListItem>
+            <ListItemIcon><FacebookIcon /></ListItemIcon>
+            <ListItemText primary="Facebook" />
+          </ListItem>
         </MaterialLink>
-        
+
         <MaterialLink color="inherit" href="https://twitter.com/RSRUSSELL6" target="_blank">
-        <ListItem button>
+          <ListItem button>
             <ListItemIcon><TwitterIcon /></ListItemIcon>
-          <ListItemText primary="Twitter" />
-        </ListItem>
+            <ListItemText primary="Twitter" />
+          </ListItem>
         </MaterialLink>
-        
+
         <MaterialLink color="inherit" href="https://www.linkedin.com/in/rs-russell/" target="_blank">
-        <ListItem button>
+          <ListItem button>
             <ListItemIcon><LinkedInIcon /></ListItemIcon>
-          <ListItemText primary="LinkedIn" />
-        </ListItem>
+            <ListItemText primary="LinkedIn" />
+          </ListItem>
         </MaterialLink>
       </List>
     </div>
@@ -96,23 +96,23 @@ export default function Navbar() {
 
   return (
     <div>
-      {['right'].map((anchor) => (
-        <AppBar position="relative">
-          <Toolbar className="nav-container main-nav">
-            <Link to="/covid19">
-              <MyButton tip="Home">
-                <HomeIcon />
-              </MyButton>
-            </Link>
+      <AppBar position="relative">
+        <Toolbar className="nav-container main-nav">
+          <Link to="/covid19">
+            <MyButton tip="Home">
+              <HomeIcon />
+            </MyButton>
+          </Link>
+          {['right'].map((anchor) => (
             <React.Fragment key={anchor}>
-              <Button onClick={toggleDrawer(anchor, true)}><MyButton tip="Menu"><MenuIcon /></MyButton></Button>
+              <MyButton onClick={toggleDrawer(anchor, true)} tip="Menu"><MenuIcon /></MyButton>
               <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                 {list(anchor)}
               </Drawer>
             </React.Fragment>
-          </Toolbar>
-        </AppBar>
-      ))}
+          ))}
+        </Toolbar>
+      </AppBar>
     </div>
   );
 }
